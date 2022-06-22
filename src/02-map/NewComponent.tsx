@@ -16,7 +16,7 @@ export const NewComponent = (props: NewComponentType) => {
             <ul>
                 {props.students.map((el, index) => {
                         return (
-                            <li key={index}>{el.id} {el.name} {el.age}</li>
+                            <li key={el.id}>{el.name} {el.age}</li>
                         )
                     }
                 )}
