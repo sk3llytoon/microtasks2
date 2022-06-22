@@ -1,26 +1,30 @@
 import React from 'react';
 
-type StudentsType = {
-    id: number
-    name: string
-    age: number
+type TopCarsType = {
+    manufacturer: string
+    model: string
 }
 
 type NewComponentType = {
-    students: Array<StudentsType>
+    topCars: Array<TopCarsType>
 }
 
 export const NewComponent = (props: NewComponentType) => {
     return (
         <div>
-            <ul>
-                {props.students.map((el, index) => {
-                        return (
-                            <li key={el.id}>{el.name} age: {el.age}</li>
-                        )
-                    }
-                )}
-            </ul>
+            <table>
+                {props.topCars.map((el, index) => {
+                    return (
+                        <tbody key={index}>
+                            <tr>
+                                <td>{index+1}</td>
+                                <td>{el.manufacturer}</td>
+                                <td>{el.model}</td>
+                            </tr>
+                        </tbody>
+                    )
+                })}
+            </table>
         </div>
     );
 };
