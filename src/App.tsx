@@ -6,6 +6,7 @@ import {Body} from "./01/Body";
 import {Footer} from "./01/Footer";
 import {NewComponent} from "./02-map/NewComponent";
 import {Button} from "./03-Button/Button";
+import {UseStatePractice} from "./04-useState/useStatePractice";
 
 function App() {
 
@@ -28,15 +29,16 @@ function App() {
     }
 
     return (
-        <>
+        <div className={"App"}>
             {/*<Header titleForHeader={"NEW HEADER"}/>*/}
             {/*<Body titleForBody={"NEW BODY"}/>*/}
             {/*<Footer titleForFooter={"NEW FOOTER"}/>*/}
             {/*<NewComponent topCars={topCars}/>*/}
-            <Button name={"MyYoutubeChannel-1"} callBack={()=>Button1Func("Im Vasya")}/>
-            <Button name={"MyYoutubeChannel-2"} callBack={()=>Button2Func("Im Misha")}/>
-            <Button name={"Button 3"} callBack={Button3Func}/>
-        </>
+            {/*<Button name={"MyYoutubeChannel-1"} callBack={()=>Button1Func("Im Vasya")}/>*/}
+            {/*<Button name={"MyYoutubeChannel-2"} callBack={()=>Button2Func("Im Misha")}/>*/}
+            {/*<Button name={"Button 3"} callBack={Button3Func}/>*/}
+            <UseStatePractice/>
+        </div>
     );
 }
 
