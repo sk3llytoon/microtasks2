@@ -7,6 +7,7 @@ import {Footer} from "./01/Footer";
 import {NewComponent} from "./02-map/NewComponent";
 import {Button} from "./03-Button/Button";
 import {UseStatePractice} from "./04-useState/useStatePractice";
+import {Filter} from "./05-filter/Filter";
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
     }
 
     return (
-        <div className={"App"}>
+        <div>
             {/*<Header titleForHeader={"NEW HEADER"}/>*/}
             {/*<Body titleForBody={"NEW BODY"}/>*/}
             {/*<Footer titleForFooter={"NEW FOOTER"}/>*/}
@@ -37,7 +38,8 @@ function App() {
             {/*<Button name={"MyYoutubeChannel-1"} callBack={()=>Button1Func("Im Vasya")}/>*/}
             {/*<Button name={"MyYoutubeChannel-2"} callBack={()=>Button2Func("Im Misha")}/>*/}
             {/*<Button name={"Button 3"} callBack={Button3Func}/>*/}
-            <UseStatePractice/>
+            {/*<UseStatePractice/>*/}
+            <Filter/>
         </div>
     );
 }
