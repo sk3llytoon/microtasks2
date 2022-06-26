@@ -8,6 +8,7 @@ import {NewComponent} from "./02-map/NewComponent";
 import {Button} from "./03-Button/Button";
 import {UseStatePractice} from "./04-useState/useStatePractice";
 import {Filter} from "./05-filter/Filter";
+import {Input} from "./06-Input/Input";
 
 function App() {
 
@@ -39,7 +40,8 @@ function App() {
             {/*<Button name={"MyYoutubeChannel-2"} callBack={()=>Button2Func("Im Misha")}/>*/}
             {/*<Button name={"Button 3"} callBack={Button3Func}/>*/}
             {/*<UseStatePractice/>*/}
-            <Filter/>
+            {/*<Filter/>*/}
+            <Input/>
         </div>
     );
 }
