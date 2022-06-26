@@ -14,10 +14,11 @@ export const FullInput = (props: FullInputPropsType) => {
 
     const onClickButtonHandler=()=>{
         props.addMessage(title)
+        setTitle('')
     }
     return (
         <div>
-            <input onChange={OnChangeInputHandler}/>
+            <input value={title} onChange={OnChangeInputHandler}/>
             <button onClick={onClickButtonHandler}>+</button>
         </div>
     );

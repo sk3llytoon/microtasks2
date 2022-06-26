@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {FullInput} from "./components/FullInput";
+import {MicroInput} from "./components/MicroInput";
+import {Button} from "./components/Button";
 
 export const Input = () => {
 
@@ -12,8 +14,9 @@ export const Input = () => {
         ]
     )
 
-    const addMessage = () => {
-        console.log('hi')
+    const addMessage = (title: string) => {
+        let newMessage={message: title}
+        setMessage([newMessage, ...message])
     }
 
     return (
@@ -22,7 +25,9 @@ export const Input = () => {
             {/*    <input type="text"/>*/}
             {/*    <button>+</button>*/}
             {/*</div>*/}
-            <FullInput addMessage={addMessage}/>
+            {/*<FullInput addMessage={addMessage}/>*/}
+            <MicroInput/>
+            <Button/>
             {message.map((el, index)=>{
                 return(
                     <div key={index}>{el.message}</div>
