@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 
-export const MicroInput = () => {
+type MicroInputPropsType = {
+    setTitle: (title: string) => void
+    title: string
+}
+
+export const MicroInput = (props: MicroInputPropsType) => {
+
+    const OnChangeInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        props.setTitle(event.currentTarget.value)
+    }
     return (
-        <div>
-
-        </div>
+        <input value={props.title} onChange={OnChangeInputHandler}/>
     );
 };

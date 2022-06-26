@@ -15,9 +15,17 @@ export const Input = () => {
     )
 
     const addMessage = (title: string) => {
-        let newMessage={message: title}
+        let newMessage = {message: title}
         setMessage([newMessage, ...message])
     }
+
+    const onClickButtonHandler = () => {
+        addMessage(title)
+        setTitle('')
+    }
+
+    let [title, setTitle] = useState('')
+    console.log(title)
 
     return (
         <>
@@ -26,10 +34,10 @@ export const Input = () => {
             {/*    <button>+</button>*/}
             {/*</div>*/}
             {/*<FullInput addMessage={addMessage}/>*/}
-            <MicroInput/>
-            <Button/>
-            {message.map((el, index)=>{
-                return(
+            <MicroInput title={title} setTitle={setTitle}/>
+            <Button name={'+'} callBack={onClickButtonHandler}/>
+            {message.map((el, index) => {
+                return (
                     <div key={index}>{el.message}</div>
                 )
             })}
